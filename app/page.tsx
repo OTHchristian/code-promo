@@ -1,12 +1,13 @@
+'use client'
+import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="bg-white pl-4 pr-4">
-      <main className="">
-        <NavBar></NavBar>
-        
+      <NavBar></NavBar>
+      <main>        
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
             <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-gray-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
@@ -132,7 +133,52 @@ export default function Home() {
         </div>
         </section>
 
+        <section className="w-full p-2.5 xl:p-5 text-black" id="nos-code-promo">
+          <div className="text-center">
+            <h1 className=" mt-10 text-4xl font-semibold">أكوادنا الترويجية الحصرية لمكاتب المراهنات</h1>
+            <p>احصل على مكافآت الترحيب الخاصة بك وقم بزيادة رهاناتك من التسجيل الأول.</p>
+          </div>
+          <div className="text-center mt-5">
+            <p>بفضل أكوادنا الترويجية التي تم التفاوض عليها خصيصًا مع أفضل وكلاء المراهنات، يمكنك الاستمتاع بفوائد حصرية من لحظة التسجيل: مكافآت الإيداع، والمراهنات المجانية، واسترداد النقود، وغير ذلك الكثير.</p>
+            <p>هدفنا بسيط: أن نسمح لك ببدء رهاناتك بأقصى قدر من الفرص من خلال مضاعفة إيداعاتك الأولى وتقليل المخاطر.</p>
+            <p>سواء كنت من مشجعي كرة القدم أو من مشجعي التنس أو من محبي الرياضات الإلكترونية، فإن أكوادنا الترويجية تفتح الأبواب أمام تجربة لعب غنية وأكثر ربحية وآمنة تمامًا.</p>
+            <p>لا تفوت هذه الفرص: قم بتفعيل رمزك الترويجي الآن وراهن بذكاء.</p>
+          </div>
+          <div className="mt-10 w-full xl:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-5 mx-auto">
+            <div className="h-100 border border-gray-200 rounded-xl"></div>
+            <div className="h-100 border border-gray-200 rounded-xl"></div>
+            <div className="h-100 border border-gray-200 rounded-xl"></div>
+          </div>
+        </section>
+
+        <section className="w-full xl:p-5 mt-5 text-black" id="faq">
+          <div className="grid cols-1 xl:grid-cols-2 gap-20">
+            <div>
+              <h1 className="text-2xl xl:text-4xl font-semibold">الأسئلة الشائعة</h1>
+              <div className="mt-5 border border-gray-200 p-5 rounded-xl">
+                <div className="flex w-full items-center justify-center">
+                  <Image src={"https://cdn.prod.website-files.com/66f8845b6f7911f99d856648/66f8845b6f7911f99d8566d5_Icon%20Container.svg"} width={60} height={60} alt="help"></Image>
+                </div>
+                <div className="text-center mt-3.5">
+                  <p>هل تحتاج إلى المزيد من المساعدة؟</p>
+                  <p>إذا لم تتمكن من العثور على الإجابة التي تبحث عنها، يرجى الاتصال بنا بالنقر فوق الزر أدناه.</p>
+                </div>
+                <div className="flex w-full items-center justify-center">
+                  <button className="flex items-center gap-2 bg-blue-900 rounded-full p-3.5 mt-3.5 text-white">
+                    اتصل بنا
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </section>
+
       </main>
+      <Footer></Footer>
     </div>
   );
 }
