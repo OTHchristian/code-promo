@@ -1,4 +1,5 @@
 'use client'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
 import Image from "next/image";
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <div className="bg-white pl-4 pr-4">
       <NavBar></NavBar>
-      <main>        
+      <main className="bg-white">        
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
             <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-gray-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
@@ -173,10 +174,72 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div></div>
+            <div>
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full text-right"
+                dir="rtl"
+                defaultValue="item-1"
+              >
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>ما هو كود برومو خاص بوكماكر؟</AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>
+                      كود البرومو هو رمز خاص يمنحك مكافآت إضافية عند التسجيل أو
+                      الإيداع في مواقع المراهنات الرياضية. يمكن أن يشمل مكافآت ترحيبية،
+                      رهانات مجانية، أو استرداد نقدي.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>كيف أستخدم كود البرومو؟</AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>
+                      العملية سهلة جداً: انسخ الكود من موقعنا وألصقه في خانة
+                      البرومو عند التسجيل أو عند إجراء أول إيداع. سيتم تفعيل
+                      المكافأة تلقائياً.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>هل الأكواد مجانية؟</AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>
+                      نعم، جميع أكواد البرومو مجانية تماماً. هدفنا هو مساعدتك
+                      على زيادة أرباحك منذ أول رهان.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>هل هذه الأكواد صالحة في الإمارات؟</AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>
+                      تعمل الأكواد مع مواقع بوكماكر عالمية متاحة في الإمارات.
+                      في بعض الحالات قد تحتاج إلى استخدام VPN وطرق دفع بديلة مثل
+                      المحافظ الإلكترونية أو العملات الرقمية.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>ماذا أفعل إذا لم يعمل الكود؟</AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance">
+                    <p>
+                      قد تنتهي صلاحية بعض الأكواد بمرور الوقت. نحن نقوم بتحديث
+                      قائمتنا باستمرار لضمان أن جميع الأكواد المعروضة صالحة
+                      ومجربة.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </section>
-
+        <hr className="border-gray-300 mt-20"/>
       </main>
       <Footer></Footer>
     </div>
