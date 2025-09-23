@@ -1,5 +1,6 @@
 'use client'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import PromoCard from "@/components/ui/card";
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
 import Image from "next/image";
@@ -146,9 +147,30 @@ export default function Home() {
             <p>لا تفوت هذه الفرص: قم بتفعيل رمزك الترويجي الآن وراهن بذكاء.</p>
           </div>
           <div className="mt-10 w-full xl:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-5 mx-auto">
+            {/* <div className="h-100 border border-gray-200 rounded-xl"></div>
             <div className="h-100 border border-gray-200 rounded-xl"></div>
-            <div className="h-100 border border-gray-200 rounded-xl"></div>
-            <div className="h-100 border border-gray-200 rounded-xl"></div>
+            <div className="h-100 border border-gray-200 rounded-xl"></div> */}
+            <PromoCard
+               name="1xbet"
+               subtitle="استمتع ببداية متفجرة مع مكافأة سخية"
+               code="GOTEN7"
+               bonus="200% على إيداعك الأول"
+               logo="/1xbet.png"
+            />
+            <PromoCard
+               name="888starz"
+               subtitle="عالم من الألعاب والعروض الحصرية"
+               code="GOTEN7"
+               bonus="100% على الإيداع الأول"
+               logo="/888starz.png"
+            />
+            <PromoCard
+               name="Melbet"
+               subtitle="الاختيار الذكي لتعزيز رهاناتك الأولى"
+               code="DTC44"
+               bonus="100% على الإيداع الأول"
+               logo="/melbet.png"
+            />
           </div>
         </section>
 
