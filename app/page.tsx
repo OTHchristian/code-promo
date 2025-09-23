@@ -103,7 +103,7 @@ export default function Home() {
           </div>
           <div className="h-100  rounded-xl flex md:items-center">
             <div>
-              <p>A bookmaker (or "bookie") is a platform specializing in taking sports or online gaming bets. Its role is to offer odds on various events—such as a football match, a boxing match, or a horse race—and allow players to bet on them.</p>
+              <p>A bookmaker  is a platform specializing in taking sports or online gaming bets. Its role is to offer odds on various events—such as a football match, a boxing match, or a horse race—and allow players to bet on them.</p>
               <p className="mt-3.5">In exchange, the bookmaker manages stakes, calculates winnings, and pays out winning bettors. Each bookmaker can distinguish itself through its sign-up bonuses, promotional offers, payment methods, and the variety of its bets.</p>
               <p className="mt-3.5">By using a reputable bookmaker, players benefit from a secure experience, a wide selection of competitions, and, above all, exclusive advantages such as promo codes that boost initial deposits and maximize winnings.</p>
             </div>
@@ -231,7 +231,7 @@ export default function Home() {
                 <p className="ml-3.5 text-gray-300">5/5</p>
               </div>
               <div className="text-black">
-                <p>I didn't know how to use a promo code before, but the explanations are clear and I was able to take advantage of a great bonus</p>
+                <p>I didn&apos;t know how to use a promo code before, but the explanations are clear and I was able to take advantage of a great bonus</p>
               </div>
 
             </div>
@@ -289,7 +289,7 @@ export default function Home() {
                 <p className="ml-3.5 text-gray-300">5/5</p>
               </div>
               <div className="text-black">
-                <p>I've tried several sites, but the codes here are always valid. I've saved and won more with my bets.</p>
+                <p>I&apos;ve tried several sites, but the codes here are always valid. I&apos;ve saved and won more with my bets.</p>
               </div>
 
             </div>
