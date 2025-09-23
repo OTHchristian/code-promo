@@ -85,7 +85,7 @@ export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) 
         <div className="flex items-center justify-between gap-3">
           <div className="flex-1 bg-black/5 rounded-md px-3 py-2 flex items-center justify-between">
             <div>
-              <p className="text-xs text-gray-500">الرمز الترويجي</p>
+              <p className="text-xs text-gray-500">Promotional code</p>
               <p className="font-mono font-semibold text-sm text-gray-900">{code}</p>
             </div>
             <button
@@ -94,7 +94,7 @@ export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) 
               className="hidden md:inline-flex items-center gap-2 px-3 py-2 border rounded-md bg-white hover:bg-gray-50"
             >
               {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
-              <span className="text-sm">{copied ? "ينسخ" : "ينسخ"}</span>
+              <span className="text-sm">{copied ? "copy" : "copy"}</span>
             </button>
           </div>
         </div>
@@ -108,29 +108,12 @@ export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) 
               // exemple: on pourrait tracker l'événement ici
             }}
           >
-            الرهان الآن
+            bet now
           </a>
-          {/* <button
-            onClick={handleCopy}
-            className="hidden md:inline-flex items-center gap-2 px-3 py-2 border rounded-md bg-white hover:bg-gray-50"
-            aria-label="Copier le code promo"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4 text-green-600" />
-                <span className="text-sm">Copié</span>
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4" />
-                <span className="text-sm">Copier</span>
-              </>
-            )}
-          </button> */}
         </div>
 
         {/* Small note */}
-        <p className="text-xs text-gray-400">الكود مقدم لأغراض إعلامية - الشروط والصلاحية حسب وكيل المراهنات.</p>
+        <p className="text-xs text-gray-400">Code provided for informational purposes - conditions and validity according to the bookmaker.</p>
       </div>
     </article>
   );
