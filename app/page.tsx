@@ -13,7 +13,7 @@ export default function Home() {
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
             <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-blue-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
-            <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex items-center justify-center">
+            <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex xl:items-center justify-center">
               <div className="xl:w-3/5 xl:p-3.5 text-center">
               <h1 className="text-4xl mb-1 font-semibold"><span className="text-blue-500">+200% </span>on your first deposit</h1>
               <h1 className="text-4xl text-blue-500 font-semibold xl:mb-5">GOTEN7</h1>
