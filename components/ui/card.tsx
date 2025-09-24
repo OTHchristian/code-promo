@@ -103,7 +103,7 @@ export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) 
         <div className="flex items-center gap-3">
           <a
             href="#"
-            className="flex-1 text-center bg-black text-white px-4 py-2 rounded-md font-medium shadow-sm hover:opacity-95"
+            className="flex-1 text-center bg-blue-500 text-white px-4 py-2 rounded-md font-medium shadow-sm hover:opacity-95"
             onClick={(e) => {
               // exemple: on pourrait tracker l'événement ici
             }}

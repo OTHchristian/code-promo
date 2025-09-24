@@ -12,88 +12,79 @@ export default function Home() {
       <main className="bg-white">        
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
-            <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-gray-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
-            <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.2)] to-white text-black flex items-center justify-center">
+            <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-blue-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
+            <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex items-center justify-center">
               <div className="xl:w-3/5 xl:p-3.5 text-center">
-                <div className="w-4/5 mx-auto rounded-full p-3.5 bg-black text-white flex items-center justify-center gap-3.5">
+              <h1 className="text-4xl mb-1 font-semibold"><span className="text-blue-500">+200% </span>on your first deposit</h1>
+              <h1 className="text-4xl text-blue-500 font-semibold xl:mb-5">GOTEN7</h1>
+                <div className="hidden xl:flex w-4/5 mx-auto rounded-full p-3.5 bg-blue-500 text-white items-center justify-center gap-3.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-fire" viewBox="0 0 16 16">
                     <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
                   </svg>
                   More than 1000 people use our promo codes
                 </div>
-                <h1 className="mt-10 text-4xl font-semibold">The best promo codes for your favorite bookmakers, all in one place!</h1>
+                <h1 className="mt-3.5 md:mt-10 text-4xl font-semibold">The best promo codes for your favorite <span className="text-blue-500">bookmakers</span>, all in one place!</h1>
                 <p>Take advantage of exclusive offers, boost your first</p>
                 <p>deposits and bet smart thanks to our always valid codes.</p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3.5 mt-10">
-                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-black text-white">Discover Promo Codes</button>
-                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-white text-black border border-black">Take Advantage of the Bonus Now</button>
+                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-blue-500 text-white">Discover Promo Codes</button>
+                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-white text-blue-500 border border-blue-500">Take Advantage of the Bonus Now</button>
                 </div>
               </div>
             </div>
-            <div className="absolute z-0 h-full w-full">
-              <Image src={'/bg.jpg'} width={10000} height={1000} alt="background" className="z-0 w-full h-full absolute"></Image>
+            <div className="hidden xl:block absolute right-0 z-20 bg-white  h-[100vh] border-l border-l-blue-500 w-1/4 rounded-tl-full transform rotate-[10deg] translate-x-[60px]">
             </div>
-            <div className="hidden xl:block absolute right-0 z-20 bg-white  h-[100vh] border-l border-l-gray-500 w-1/4 rounded-tl-full transform rotate-[10deg] translate-x-[60px]"></div>
           </div>
         </section>
 
         <section className="w-full p-2.5 xl:p-5" id="stat">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:w-4/5 xl:mx-auto text-black">
-            <div className=" border border-gray-200 rounded-xl p-10">
+            <div className=" border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl">+1000 users</h1>
-                  <p className="text-gray-500 ">Thousands of people already benefit from our promo codes every day.</p>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+1000</h1>
+                  <p className="text-gray-500 mt-3.5">users already benefit from our promo codes every day.</p>
                 </div>
             </div>
-            <div className="border border-gray-200 rounded-xl p-10">
+            <div className="border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl">+500 offers available</h1>
-                  <p className="text-gray-500">You can easily find exclusive bonuses for your favorite bookmarkers.</p>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+500</h1>
+                  <p className="text-gray-500 mt-3.5">offers available You can easily find exclusive bonuses for your favorite bookmarkers.</p>
                 </div> 
             </div>
-            <div className="border border-gray-200 rounded-xl p-10">
+            <div className="border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl">+200 partners</h1>
-                  <p className="text-gray-500">We work with the best brands to offer you maximum savings.</p>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+200</h1>
+                  <p className="text-gray-500 mt-3.5">partners.We work with the best brands to offer you maximum savings.</p>
                 </div>
             </div>
-            <div className="border border-gray-200 rounded-xl p-10">
+            <div className="border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl">+99% satisfaction</h1>
-                  <p className="text-gray-500">Our users love saving online with our curated offers.</p>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+99%</h1>
+                  <p className="text-gray-500 mt-3.5">satisfaction. Our users love saving online with our curated offers.</p>
                 </div>
             </div>
           </div>
         </section>
 
-        <section className="w-full p-2.5 xl:p-5" id="sponsor">
+        {/* <section className="w-full p-2.5 xl:p-5" id="sponsor">
           <hr  className="border border-gray-200 mt-1.5"/>
-          <div className="mt-1.5  grid grid-cols-3 md:grid-cols-6 items-center justify-center text-black">
+          <div className="mt-1.5  grid grid-cols-3 md:grid-cols-3 items-center justify-center text-black">
               <div className="flex h-30 w-30 items-center justify-center overflow-hidden">
-                <h1 className="xl:text-2xl font-bold">1XBET</h1>
+                <Image src={'/1xbet.png'} alt="" width={1000} height={1000}></Image>
               </div>
-              <div className="hidden md:flex h-30 w-30  items-center justify-center overflow-hidden bg-gray-500 text-white rounded-xl">
-                <h1 className="xl:text-2xl font-bold">22BET</h1>
-              </div>
-              <div className="h-30 w-30 flex items-center justify-center overflow-hidde bg-gray-500 text-white md:bg-white md:text-black rounded-xl">
-                <h1 className="xl:text-2xl font-bold">BETWINNER</h1>
-              </div>
-              <div className="h-30 w-30 flex items-center justify-center overflow-hidden md:bg-gray-500 md:text-white rounded-xl">
-                <h1 className="xl:text-2xl font-bold">BET365</h1>
+              <div className="h-30 w-30 flex items-center justify-center overflow-hidde text-white md:bg-white md:text-black rounded-xl">
+                <Image src={'/betwinner.png'} alt="" width={1000} height={1000}></Image>
               </div>
               <div className="hidden md:flex h-30 w-30 items-center justify-center overflow-hidden">
-                <h1 className="xl:text-2xl font-bold">BETWAY</h1>
-              </div>
-              <div className="hidden md:flex h-30 w-30 items-center justify-center overflow-hidden bg-gray-500 text-white rounded-xl">
-                <h1 className="xl:text-2xl font-bold">1BET</h1>
+                <Image src={'/888starz.png'} alt="" width={1000} height={1000}></Image>
               </div>
           </div>
           <hr  className="border border-gray-200 mt-1.5"/>
-        </section>
+        </section> */}
 
         <section className="w-full p-2.5 xl:p-5 text-black" id="what-is-bookmarker">
         <div className="text-center">
-          <h1 className=" mt-10 text-4xl font-semibold">What is a bookmaker and why use one?</h1>
+          <h1 className=" mt-10 text-4xl font-semibold text-blue-500">What is a bookmaker and why use one?</h1>
             <p>Understand the role of bookmakers and how they make your online betting possible.</p>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mt-10">
@@ -113,7 +104,7 @@ export default function Home() {
 
         <section className="w-full p-2.5 xl:p-5 text-black" id="advantages-bookmakers">
           <div className="text-center">
-            <h1 className="mt-10 text-4xl font-semibold">
+            <h1 className="mt-10 text-4xl font-semibold text-blue-500">
               Why Choose Online Bookmakers?
             </h1>
             <p>
@@ -144,7 +135,7 @@ export default function Home() {
 
         <section className="w-full p-2.5 xl:p-5 text-black" id="nos-code-promo">
           <div className="text-center">
-            <h1 className=" mt-10 text-4xl font-semibold">Our exclusive promo codes for bookmakers</h1>
+            <h1 className=" mt-10 text-4xl font-semibold text-blue-500">Our exclusive promo codes for bookmakers</h1>
             <p>Get your welcome bonus and increase your bets from the first registration.</p>
           </div>
           <div className="mt-10 w-full xl:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-5 mx-auto">
@@ -174,7 +165,7 @@ export default function Home() {
 
         <section className="w-full xl:p-5 mt-5" id="testimonial">
           <div className="text-center text-black">
-            <h1 className="text-2xl xl:text-4xl font-semibold">Testimonials</h1>
+            <h1 className="text-2xl xl:text-4xl font-semibold text-blue-500">Testimonials</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 mt-3.5">
             <div className="border border-gray-200 rounded-xl p-3.5">
