@@ -17,7 +17,8 @@ export default function Home() {
   return (
     <div className="bg-white pl-4 pr-4">
       <NavBar></NavBar>
-      <main className="bg-white">        
+      <main className="bg-white">
+
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
             <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-blue-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
@@ -90,7 +91,7 @@ export default function Home() {
           <hr  className="border border-gray-200 mt-1.5"/>
         </section> */}
 
-        <section className="w-full p-2.5 xl:p-5">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5">
           <div className="max-w-6xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
             
             {/* Texte */}
@@ -131,13 +132,13 @@ export default function Home() {
               <img
                 src="/pronostics-foot.webp"
                 alt="1xBet inscription"
-                className="rounded-2xl md:shadow-lg max-h-[400px] object-cover"
+                className="rounded-2xl  max-h-[400px] object-cover"
               />
             </div>
           </div>
         </section>
 
-        <section className="w-full p-2.5 xl:p-5" id="what-is-bookmaker">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="what-is-bookmaker">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
               What is a bookmaker and why use one?
@@ -193,7 +194,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full p-2.5 xl:p-5" id="advantages-bookmakers">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="advantages-bookmakers">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
               Why Choose Online Bookmakers?
@@ -207,9 +208,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3.5 mt-3.5">
             {/* Card 1 */}
-            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Exclusive Bonuses</h2>
               <p className="mt-3 text-gray-700">
                 Get welcome bonuses, free bets, and promo codes that maximize your winnings.
@@ -217,7 +218,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Wide Variety of Sports</h2>
               <p className="mt-3 text-gray-700">
                 Bet on football, tennis, basketball, e-sports and many more events worldwide.
@@ -225,7 +226,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6 hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Safety & Reliability</h2>
               <p className="mt-3 text-gray-700">
                 All bookmakers are licensed, regulated and provide secure transactions.
@@ -233,7 +234,7 @@ export default function Home() {
             </div>
 
             {/* Card 4 */}
-            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6 hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Easy & Fast Experience</h2>
               <p className="mt-3 text-gray-700">
                 Simple platforms and mobile apps make betting smooth and accessible anywhere.
@@ -242,12 +243,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full p-2.5 xl:p-5" id="nos-code-promo">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="nos-code-promo">
           <div className="text-center">
-            <h1 className=" mt-10 text-4xl font-semibold text-blue-500">Our exclusive promo codes for bookmakers</h1>
+            <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Our exclusive promo codes for bookmakers</h1>
             <p>Get your welcome bonus and increase your bets from the first registration.</p>
           </div>
-          <div className="mt-10 w-full xl:w-3/4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mx-auto">
+          <div className="mt-10 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mx-auto">
             <PromoCard
                name="1xbet"
                subtitle="Enjoy an explosive start with a generous bonus."
@@ -272,21 +273,21 @@ export default function Home() {
             <PromoCard
                name="betwinner"
                subtitle="The smart choice to boost your first bets"
-               code="DTC44"
+               code="GOTEN8"
                bonus="100% on the first deposit"
-               logo="/melbet.png"
+               logo=""
             />
             <PromoCard
                name="Megaparie"
                subtitle="The smart choice to boost your first bets"
-               code="DTC44"
+               code="GOTEN7"
                bonus="100% on the first deposit"
-               logo="/melbet.png"
+               logo=""
             />
           </div>
         </section>
 
-        <section className="w-full p-2.5 xl:p-5" id="why-choose-code">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="why-choose-code">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
               Why Choose Our Promo Code?
@@ -299,9 +300,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-8 md:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 md:mt-12">
             {/* Card 1 */}
-            <div className="md:border border-blue-500 bg-white rounded-2xl p-6 md:shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Bigger Welcome Bonus</h2>
               <p className="mt-3 text-gray-700">
                 Enjoy an exclusive <span className="font-medium">200% bonus</span> on your first deposit
@@ -310,7 +311,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="md:border border-blue-500 bg-white rounded-2xl p-6 md:shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Extra Rewards</h2>
               <p className="mt-3 text-gray-700">
                 Access <span className="font-medium">exclusive free bets</span> and ongoing promotions
@@ -319,7 +320,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="md:border border-blue-500 bg-white rounded-2xl p-6 md:shadow-lg hover:shadow-xl transition">
+            <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Faster Start</h2>
               <p className="mt-3 text-gray-700">
                 With our code, your account is <span className="font-medium">activated instantly</span>, 
@@ -334,12 +335,12 @@ export default function Home() {
               href="#register"
               className="inline-block bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-md hover:bg-blue-600 transition"
             >
-              Use Our Promo Code & Claim Your Bonus
+              Use Our Promo Code
             </a>
           </div>
         </section>
 
-        <section className="w-full xl:p-5 mt-5" id="testimonial">
+        <section className="max-w-6xl mx-auto w-full xl:p-5 mt-5" id="testimonial">
           <div className="text-center text-black">
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Testimonials</h1>
           </div>
@@ -528,11 +529,10 @@ export default function Home() {
           
         </section>
 
-
-        <section className="w-full xl:p-5 mt-5 text-black" id="faq">
+        <section className="max-w-6xl mx-auto w-full xl:p-5 mt-5 text-black" id="faq">
           <div className="grid cols-1 xl:grid-cols-2 gap-20">
             <div>
-              <h1 className="text-2xl xl:text-4xl font-semibold">Frequently Asked Questions</h1>
+              <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Frequently Asked Questions</h1>
               <div className="mt-5 border border-gray-200 p-5 rounded-xl">
                 <div className="flex w-full items-center justify-center">
                   <Image
@@ -640,6 +640,7 @@ export default function Home() {
         <hr className="border-gray-300 mt-20"/>
 
       </main>
+
       <Footer></Footer>
     </div>
   );
