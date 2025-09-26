@@ -156,7 +156,7 @@ export default function Home() {
                 alt="1xbet"
                 width={1000}
                 height={1000}
-                className="rounded-2xl  w-2/3 md:w-1/2 object-cover"
+                className="rounded-2xl mx-auto  w-2/3 md:w-1/2 object-cover"
               />
               <Image
                 src="/melbet.webp"
@@ -333,7 +333,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <a
               href="#register"
-              className="inline-block bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-md hover:bg-blue-600 transition"
+              className="inline-block bg-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-md hover:bg-blue-600 transition"
             >
               Use Our Promo Code
             </a>
