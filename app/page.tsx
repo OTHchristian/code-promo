@@ -131,7 +131,7 @@ export default function Home() {
               <img
                 src="/pronostics-foot.webp"
                 alt="1xBet inscription"
-                className="rounded-2xl shadow-lg max-h-[400px] object-cover"
+                className="rounded-2xl md:shadow-lg max-h-[400px] object-cover"
               />
             </div>
           </div>
