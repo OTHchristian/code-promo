@@ -4,8 +4,16 @@ import PromoCard from "@/components/ui/card";
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("1XBET2025");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   return (
     <div className="bg-white pl-4 pr-4">
       <NavBar></NavBar>
@@ -13,7 +21,7 @@ export default function Home() {
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
             <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-blue-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
-            <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex xl:items-center justify-center">
+            <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex mt-5 md::mt-0 md:items-center justify-center">
               <div className="xl:w-3/5 xl:p-3.5 text-center">
               <h1 className="text-4xl mb-1 font-semibold"><span className="text-blue-500">+200% </span>on your first deposit</h1>
               <h1 className="text-4xl text-blue-500 font-semibold xl:mb-5">GOTEN7</h1>
@@ -82,63 +90,164 @@ export default function Home() {
           <hr  className="border border-gray-200 mt-1.5"/>
         </section> */}
 
-        <section className="w-full p-2.5 xl:p-5 text-black" id="what-is-bookmarker">
-        <div className="text-center">
-          <h1 className=" mt-10 text-4xl font-semibold text-blue-500">What is a bookmaker and why use one?</h1>
-            <p>Understand the role of bookmakers and how they make your online betting possible.</p>
-        </div>
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mt-10">
-          <div className="h-100  rounded-xl flex">
-            <Image src={'/1xbet.webp'} alt='1xbet' width={1000} height={1000} className=" w-full md:w-1/2 h-full"></Image>
-            <Image src={'/melbet.webp'} alt='1xbet' width={1000} height={1000} className="hidden md:block w-1/3 h-full"></Image>
-          </div>
-          <div className="h-100  rounded-xl flex md:items-center">
-            <div>
-              <p>A bookmaker  is a platform specializing in taking sports or online gaming bets. Its role is to offer odds on various events—such as a football match, a boxing match, or a horse race—and allow players to bet on them.</p>
-              <p className="mt-3.5">In exchange, the bookmaker manages stakes, calculates winnings, and pays out winning bettors. Each bookmaker can distinguish itself through its sign-up bonuses, promotional offers, payment methods, and the variety of its bets.</p>
-              <p className="mt-3.5">By using a reputable bookmaker, players benefit from a secure experience, a wide selection of competitions, and, above all, exclusive advantages such as promo codes that boost initial deposits and maximize winnings.</p>
+        <section className="w-full p-2.5 xl:p-5">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
+            
+            {/* Texte */}
+            <div className="space-y-6">
+              <h1 className="text-4xl xl:text-5xl font-bold leading-tight">
+                Rejoignez plus de <span className="text-blue-500">1000+</span> parieurs gagnants sur 1xBet !
+              </h1>
+              <p className="text-lg">
+                Profitez de notre code promo exclusif pour{" "}
+                <span className="font-semibold text-blue-500">
+                  doubler votre premier dépôt
+                </span>{" "}
+                et maximiser vos chances dès le début.
+              </p>
+              <ul className="space-y-2">
+                <li>Bonus de bienvenue <strong>200%</strong></li>
+                <li>Inscription rapide en 1 minute</li>
+                <li>Paiements sécurisés et variés</li>
+                <li>Accès à toutes les compétitions sportives & eSports</li>
+              </ul>
+
+              {/* Boutons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                <button className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-500 transition">
+                  S&apos;inscrire maintenant
+                </button>
+                <button
+                  onClick={handleCopy}
+                  className="border border-blue-500 text-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition"
+                >
+                  {copied ? "✅ Code copié !" : "Copier le code promo"}
+                </button>
+              </div>
+            </div>
+
+            {/* Image illustration */}
+            <div className="flex justify-center">
+              <img
+                src="/pronostics-foot.webp"
+                alt="1xBet inscription"
+                className="rounded-2xl shadow-lg max-h-[400px] object-cover"
+              />
             </div>
           </div>
-        </div>
         </section>
 
-        <section className="w-full p-2.5 xl:p-5 text-black" id="advantages-bookmakers">
-          <div className="text-center">
-            <h1 className="mt-10 text-4xl font-semibold text-blue-500">
-              Why Choose Online Bookmakers?
+        <section className="w-full p-2.5 xl:p-5" id="what-is-bookmaker">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
+              What is a bookmaker and why use one?
             </h1>
-            <p>
-              Discover the key benefits that make bookmakers the perfect choice for betting:
-              security, bonuses, variety, and an easy-to-use experience.
+            <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+              Understand the role of bookmakers and how they make your online betting possible.
             </p>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-5 mt-10">
-            <div className="h-100 border border-gray-200 rounded-xl p-3.5">
-              <h1 className="text-2xl font-semibold">1. Exclusive Bonuses</h1>
-              <p>Get welcome bonuses, free bets, and promo codes that maximize your winnings.</p>
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 mt-12 items-center justify-center">
+            {/* Images */}
+            <div className="relative flex gap-4">
+              <Image
+                src="/1xbet.webp"
+                alt="1xbet"
+                width={1000}
+                height={1000}
+                className="rounded-2xl  w-2/3 md:w-1/2 object-cover"
+              />
+              <Image
+                src="/melbet.webp"
+                alt="melbet"
+                width={1000}
+                height={1000}
+                className="hidden md:block rounded-2xl w-1/3 object-cover"
+              />
             </div>
-            <div className="relative h-100 border border-gray-200 rounded-xl p-3.5">
-              <h1 className="text-2xl font-semibold">2. Wide Variety of Sports</h1>
-              <p>Bet on football, tennis, basketball, e-sports and many more events worldwide.</p>
-            </div>
-            <div className="relative h-100 border border-gray-200 rounded-xl p-3.5">
-              <h1 className="text-2xl font-semibold">3. Safety & Reliability</h1>
-              <p>All bookmakers are licensed, regulated and provide secure transactions.</p>
-            </div>
-            <div className="relative h-100 border border-gray-200 rounded-xl p-3.5">
-              <h1 className="text-2xl font-semibold">4. Easy & Fast Experience</h1>
-              <p>Simple platforms and mobile apps make betting smooth and accessible anywhere.</p>
+
+            {/* Text Content */}
+            <div className="space-y-5 text-gray-800">
+              <p className="leading-relaxed">
+                A <span className="font-semibold text-blue-500">bookmaker</span> is a platform
+                specializing in taking sports or online gaming bets. Its role is to offer odds
+                on various events—such as a football match, a boxing match, or a horse race—and
+                allow players to bet on them.
+              </p>
+              <p className="leading-relaxed">
+                In exchange, the bookmaker manages stakes, calculates winnings, and pays out
+                winning bettors. Each bookmaker can distinguish itself through its{" "}
+                <span className="font-medium">sign-up bonuses</span>,{" "}
+                <span className="font-medium">promotional offers</span>,{" "}
+                <span className="font-medium">payment methods</span>, and the{" "}
+                <span className="font-medium">variety of its bets</span>.
+              </p>
+              <p className="leading-relaxed">
+                By using a reputable bookmaker, players benefit from a{" "}
+                <span className="font-semibold text-blue-500">secure experience</span>, a wide
+                selection of competitions, and, above all, exclusive advantages such as{" "}
+                <span className="font-semibold">promo codes</span> that boost initial deposits
+                and maximize winnings.
+              </p>
             </div>
           </div>
         </section>
 
+        <section className="w-full p-2.5 xl:p-5" id="advantages-bookmakers">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
+              Why Choose Online Bookmakers?
+            </h1>
+            <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+              Discover the key benefits that make bookmakers the perfect choice for betting:
+              <span className="font-medium text-blue-500"> security</span>, 
+              <span className="font-medium text-blue-500"> bonuses</span>, 
+              <span className="font-medium text-blue-500"> variety</span>, 
+              and an <span className="font-medium text-blue-500">easy-to-use experience</span>.
+            </p>
+          </div>
 
-        <section className="w-full p-2.5 xl:p-5 text-black" id="nos-code-promo">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
+            {/* Card 1 */}
+            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Exclusive Bonuses</h2>
+              <p className="mt-3 text-gray-700">
+                Get welcome bonuses, free bets, and promo codes that maximize your winnings.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Wide Variety of Sports</h2>
+              <p className="mt-3 text-gray-700">
+                Bet on football, tennis, basketball, e-sports and many more events worldwide.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Safety & Reliability</h2>
+              <p className="mt-3 text-gray-700">
+                All bookmakers are licensed, regulated and provide secure transactions.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="border border-blue-500 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Easy & Fast Experience</h2>
+              <p className="mt-3 text-gray-700">
+                Simple platforms and mobile apps make betting smooth and accessible anywhere.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full p-2.5 xl:p-5" id="nos-code-promo">
           <div className="text-center">
             <h1 className=" mt-10 text-4xl font-semibold text-blue-500">Our exclusive promo codes for bookmakers</h1>
             <p>Get your welcome bonus and increase your bets from the first registration.</p>
           </div>
-          <div className="mt-10 w-full xl:w-3/4 grid grid-cols-1 xl:grid-cols-3 gap-5 mx-auto">
+          <div className="mt-10 w-full xl:w-3/4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mx-auto">
             <PromoCard
                name="1xbet"
                subtitle="Enjoy an explosive start with a generous bonus."
@@ -160,17 +269,85 @@ export default function Home() {
                bonus="100% on the first deposit"
                logo="/melbet.png"
             />
+            <PromoCard
+               name="betwinner"
+               subtitle="The smart choice to boost your first bets"
+               code="DTC44"
+               bonus="100% on the first deposit"
+               logo="/melbet.png"
+            />
+            <PromoCard
+               name="Megaparie"
+               subtitle="The smart choice to boost your first bets"
+               code="DTC44"
+               bonus="100% on the first deposit"
+               logo="/melbet.png"
+            />
+          </div>
+        </section>
+
+        <section className="w-full p-2.5 xl:p-5" id="why-choose-code">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
+              Why Choose Our Promo Code?
+            </h1>
+            <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+              Our exclusive promo code unlocks the best advantages for your betting journey: 
+              <span className="font-medium text-blue-500"> higher bonuses</span>, 
+              <span className="font-medium text-blue-500"> more rewards</span>, and 
+              <span className="font-medium text-blue-500">maximum value</span> on every deposit.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-8 md:mt-12">
+            {/* Card 1 */}
+            <div className="md:border border-blue-500 bg-white rounded-2xl p-6 md:shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Bigger Welcome Bonus</h2>
+              <p className="mt-3 text-gray-700">
+                Enjoy an exclusive <span className="font-medium">200% bonus</span> on your first deposit
+                when using our code — more than the standard offer.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="md:border border-blue-500 bg-white rounded-2xl p-6 md:shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Extra Rewards</h2>
+              <p className="mt-3 text-gray-700">
+                Access <span className="font-medium">exclusive free bets</span> and ongoing promotions
+                reserved only for players using our promo code.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="md:border border-blue-500 bg-white rounded-2xl p-6 md:shadow-lg hover:shadow-xl transition">
+              <h2 className="text-xl font-semibold text-blue-500">Faster Start</h2>
+              <p className="mt-3 text-gray-700">
+                With our code, your account is <span className="font-medium">activated instantly</span>, 
+                letting you jump into betting without delays.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <a
+              href="#register"
+              className="inline-block bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-md hover:bg-blue-600 transition"
+            >
+              Use Our Promo Code & Claim Your Bonus
+            </a>
           </div>
         </section>
 
         <section className="w-full xl:p-5 mt-5" id="testimonial">
           <div className="text-center text-black">
-            <h1 className="text-2xl xl:text-4xl font-semibold text-blue-500">Testimonials</h1>
+            <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Testimonials</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 mt-3.5">
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+                  <p className="text-3xl text-white">A</p>
                 </div>
                 <p className="text-black">Ahmed Al-Mansouri</p>
               </div>
@@ -199,7 +376,8 @@ export default function Home() {
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+                  <p className="text-3xl text-white">F</p>
                 </div>
                 <p className="text-black">Fatima Khaled</p>
               </div>
@@ -228,7 +406,8 @@ export default function Home() {
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+                  <p className="text-3xl text-white">O</p>
                 </div>
                 <p className="text-black">Omar El-Haddad</p>
               </div>
@@ -257,7 +436,8 @@ export default function Home() {
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+                  <p className="text-3xl text-white">L</p>
                 </div>
                 <p className="text-black">Layla Ben Youssef</p>
               </div>
@@ -286,7 +466,8 @@ export default function Home() {
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+                  <p className="text-3xl text-white">Y</p>
                 </div>
                 <p className="text-black">Youssef Al-Farouq</p>
               </div>
@@ -315,7 +496,8 @@ export default function Home() {
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+                  <p className="text-3xl text-white">S</p>
                 </div>
                 <p className="text-black">Salma Nasser</p>
               </div>
@@ -345,6 +527,7 @@ export default function Home() {
           </div>
           
         </section>
+
 
         <section className="w-full xl:p-5 mt-5 text-black" id="faq">
           <div className="grid cols-1 xl:grid-cols-2 gap-20">
@@ -451,6 +634,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="joins-us"></section>
 
         <hr className="border-gray-300 mt-20"/>
 

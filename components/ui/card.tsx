@@ -63,7 +63,7 @@ export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) 
           <div className="w-20 h-20 flex items-center justify-center rounded-lg overflow-hidden">
             {logo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={logo} alt={`${name} logo`} height={1000} width={1000} className="w-full h-full object-contain" />
+              <img src={logo} alt={`${name} logo`} className="w-full h-full object-contain" />
             ) : (
               <div className="text-sm font-semibold text-gray-700">{name.charAt(0)}</div>
             )}
