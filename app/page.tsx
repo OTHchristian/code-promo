@@ -18,7 +18,7 @@ export default function Home() {
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <div className=" pl-4 pr-4">
+    <div className="pl-4 pr-4 overflow-hidden">
       <NavBar></NavBar>
       <main className="">
 
@@ -39,8 +39,8 @@ export default function Home() {
                 <p>Take advantage of exclusive offers, boost your first</p>
                 <p>deposits and bet smart thanks to our always valid codes.</p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3.5 mt-10">
-                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-blue-500 text-white">Discover Promo Codes</button>
-                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-white text-blue-500 border border-blue-500">Take Advantage of the Bonus Now</button>
+                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-blue-500 text-white" onClick={()=>window.location.href='#ours-codes'}>Discover Promo Codes</button>
+                  <button className="w-full xl:w-fit rounded-full p-3.5 bg-white text-blue-500 border border-blue-500" onClick={()=>window.location.href='https://refpa58144.com/L?tag=d_2945337m_1573c_&site=2945337&ad=1573'}>Take Advantage of the Bonus Now</button>
                 </div>
               </div>
             </div>
