@@ -10,14 +10,14 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("1XBET2025");
+    navigator.clipboard.writeText("GOTEN7");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <div className="bg-white pl-4 pr-4">
+    <div className=" pl-4 pr-4">
       <NavBar></NavBar>
-      <main className="bg-white">
+      <main className="">
 
         <section className="w-full p-2.5 xl:p-5 mt-2.5 h-[calc(100vh-70px)]" id="hero-section">
           <div className="relative h-full flex overflow-hidden">
@@ -115,7 +115,10 @@ export default function Home() {
 
               {/* Boutons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                <button className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-500 transition">
+                <button 
+                  className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-500 transition" 
+                  onClick={()=>window.location.href='https://refpa58144.com/L?tag=d_2945337m_1573c_&site=2945337&ad=1573'}
+                >
                   S&apos;inscrire maintenant
                 </button>
                 <button
@@ -208,6 +211,10 @@ export default function Home() {
             </p>
           </div>
 
+          <div>
+            <Image src={"/bookmarkers.jpg"} width={1000} height={1000} alt="bookmarker" className="mx-auto rounded-xl"></Image>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3.5 mt-3.5">
             {/* Card 1 */}
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
@@ -248,6 +255,9 @@ export default function Home() {
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Our exclusive promo codes for bookmakers</h1>
             <p>Get your welcome bonus and increase your bets from the first registration.</p>
           </div>
+          <div>
+            <Image src={"/code-promo.webp"} width={800} height={800} alt="code promo" className="mx-auto rounded-xl"></Image>
+          </div>
           <div className="mt-10 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mx-auto">
             <PromoCard
                name="1xbet"
@@ -255,6 +265,7 @@ export default function Home() {
                code="GOTEN7"
                bonus="200% on your first deposit"
                logo="/1xbet.png"
+               link="https://refpa58144.com/L?tag=d_2945337m_1573c_&site=2945337&ad=1573"
             />
             <PromoCard
                name="888starz"
@@ -262,6 +273,7 @@ export default function Home() {
                code="GOTEN7"
                bonus="100% on the first deposit"
                logo="/888starz.png"
+               link="https://top100bonus.com/L?tag=d_3330235m_40211c_&site=3330235&ad=40211"
             />
             <PromoCard
                name="Melbet"
@@ -269,6 +281,7 @@ export default function Home() {
                code="DTC44"
                bonus="100% on the first deposit"
                logo="/melbet.png"
+               link="https://refpa3665.com/L?tag=d_3297580m_2170c_&site=3297580&ad=2170"
             />
             <PromoCard
                name="betwinner"
@@ -276,13 +289,15 @@ export default function Home() {
                code="GOTEN8"
                bonus="100% on the first deposit"
                logo=""
+               link="#"
             />
             <PromoCard
-               name="Megaparie"
+               name="Megaparis"
                subtitle="The smart choice to boost your first bets"
                code="GOTEN7"
                bonus="100% on the first deposit"
                logo=""
+               link="https://refpazitag.top/L?tag=d_3860481m_25437c_&site=3860481&ad=25437"
             />
           </div>
         </section>
@@ -299,7 +314,9 @@ export default function Home() {
               <span className="font-medium text-blue-500">maximum value</span> on every deposit.
             </p>
           </div>
-
+          <div>
+            <Image src={"/think.jpg"} width={500} height={500} alt="bookmarker" className="mx-auto rounded-xl"></Image>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 md:mt-12">
             {/* Card 1 */}
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">

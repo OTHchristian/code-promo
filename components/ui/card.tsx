@@ -28,9 +28,10 @@ type Props = {
   code: string;
   bonus?: string;
   logo?: string;
+  link: string;
 };
 
-export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) {
+export default function PromoCard({ name, subtitle, code, bonus, logo,link }: Props) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -102,7 +103,7 @@ export default function PromoCard({ name, subtitle, code, bonus, logo }: Props) 
         {/* Actions */}
         <div className="flex items-center gap-3">
           <a
-            href="#"
+            href={link}
             className="flex-1 text-center bg-blue-500 text-white px-4 py-2 rounded-md font-medium shadow-sm hover:opacity-95"
             onClick={(e) => {
               // exemple: on pourrait tracker l'événement ici
