@@ -2,6 +2,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import PromoCard from "@/components/ui/card";
 import Compteur from "@/components/ui/compteur";
+import Countdown from "@/components/ui/countdown";
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
 import Reveal from "@/components/ui/reveal";
@@ -102,6 +103,7 @@ export default function Home() {
         </section> */}
 
         <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5">
+          <Countdown></Countdown>
           <div className="max-w-6xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
             
             {/* Texte */}
@@ -283,7 +285,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="nos-code-promo">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="ours-codes">
           <div className="text-center">
             <Reveal>
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Our exclusive promo codes for bookmakers</h1>
@@ -416,7 +418,7 @@ export default function Home() {
           </Reveal>
         </section>
 
-        <section className="max-w-6xl mx-auto w-full xl:p-5 mt-5" id="testimonial">
+        <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5 mt-5" id="testimonial">
           <div className="text-center text-black">
             <Reveal>
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Testimonials</h1>
@@ -619,7 +621,7 @@ export default function Home() {
           
         </section>
 
-        <section className="w-full bg-gray-50 text-black py-16 px-6 rounded-2xl mt-10">
+        <section className="w-full bg-gray-50 text-black p-2.5 xl:p-5 rounded-2xl mt-10">
           <div className="max-w-6xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
             {/* Text and links */}
             <div className="space-y-6">

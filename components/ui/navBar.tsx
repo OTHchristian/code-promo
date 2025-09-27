@@ -2,11 +2,11 @@
 export default function NavBar(){
     return (
         <nav className="h-[70px] w-full xl:w-3/4 sticky top-0  md:top-2.5 z-40 md:py-2.5 max-w-landing-width mx-auto flex justify-between items-center md:rounded-full border-b md:border border-[rgba(0,0,0,0.2)]  p-2 backdrop-blur-md bg-[#f7fafb]/80">
-            <ul className="hidden xl:block w-1/2">
-                <li className="font-semibold text-black"></li>
+            <ul className="w-1/2">
+                <li className="font-semibold text-black xl:ml-10 text-2xl"><span className="text-blue-500">C</span>ode <span className="text-blue-500">p</span>romo</li>
             </ul>
-            <ul className="w-1/3"></ul>
-            <ul className="xl:w-1/5 ml-10">
+            {/* <ul className="w-1/3"></ul> */}
+            <ul className="w-1/2 xl:w-fit ml-10">
                 <li className="flex gap-2.5 p-2.5 xl:p-3.5 rounded-full bg-blue-500 items-center justify-center" onClick={()=>window.location.href='#nos-code-promo'}>
                     <span className="text-white">ours codes</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" className="bi bi-arrow-right" viewBox="0 0 16 16">
