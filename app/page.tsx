@@ -4,6 +4,7 @@ import PromoCard from "@/components/ui/card";
 import Compteur from "@/components/ui/compteur";
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
+import Reveal from "@/components/ui/reveal";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -25,7 +26,7 @@ export default function Home() {
             <div className="hidden xl:block absolute left-0 top-0 z-20 bg-white h-[100vh] border-r border-r-blue-500 w-1/4 rounded-tr-full transform rotate-[-10deg] translate-x-[-60px] "></div>
             <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex mt-5 md::mt-0 md:items-center justify-center">
               <div className="xl:w-3/5 xl:p-3.5 text-center">
-              <h1 className="text-4xl mb-1 font-semibold"><span className="text-blue-500">+200% </span>on your first deposit</h1>
+              <h1 className="text-4xl mb-1 font-semibold"><span className="text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={200}></Compteur>% </span>on your first deposit</h1>
               <h1 className="text-4xl text-blue-500 font-semibold xl:mb-5">GOTEN7</h1>
                 <div className="hidden xl:flex w-4/5 mx-auto rounded-full p-3.5 bg-blue-500 text-white items-center justify-center gap-3.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-fire" viewBox="0 0 16 16">
@@ -49,30 +50,38 @@ export default function Home() {
 
         <section className="w-full p-2.5 xl:p-5" id="stat">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:w-4/5 xl:mx-auto text-black">
-            <div className=" border border-gray-200 rounded-xl p-3.5">
-                <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={1000}></Compteur></h1>
-                  <p className="text-gray-500 mt-3.5">users already benefit from our promo codes every day.</p>
-                </div>
-            </div>
-            <div className="border border-gray-200 rounded-xl p-3.5">
-                <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={500}></Compteur></h1>
-                  <p className="text-gray-500 mt-3.5">offers available You can easily find exclusive bonuses for your favorite bookmarkers.</p>
-                </div> 
-            </div>
-            <div className="border border-gray-200 rounded-xl p-3.5">
-                <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={200}></Compteur></h1>
-                  <p className="text-gray-500 mt-3.5">partners.We work with the best brands to offer you maximum savings.</p>
-                </div>
-            </div>
-            <div className="border border-gray-200 rounded-xl p-3.5">
-                <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={99}></Compteur>%</h1>
-                  <p className="text-gray-500 mt-3.5">satisfaction. Our users love saving online with our curated offers.</p>
-                </div>
-            </div>
+            <Reveal>
+              <div className=" border border-gray-200 h-38 rounded-xl p-3.5">
+                  <div className="text-center">
+                    <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={1000}></Compteur></h1>
+                    <p className="text-gray-500 mt-3.5">users already benefit from our promo codes every day.</p>
+                  </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="border border-gray-200 h-38 rounded-xl p-3.5">
+                  <div className="text-center">
+                    <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={500}></Compteur></h1>
+                    <p className="text-gray-500 mt-3.5">offers available You can easily find exclusive bonuses for your favorite bookmarkers.</p>
+                  </div> 
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="border border-gray-200 h-38 rounded-xl p-3.5">
+                  <div className="text-center">
+                    <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={200}></Compteur></h1>
+                    <p className="text-gray-500 mt-3.5">partners.We work with the best brands to offer you maximum savings.</p>
+                  </div>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="border border-gray-200 h-38 rounded-xl p-3.5">
+                  <div className="text-center">
+                    <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={99}></Compteur>%</h1>
+                    <p className="text-gray-500 mt-3.5">satisfaction. Our users love saving online with our curated offers.</p>
+                  </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 
@@ -97,82 +106,92 @@ export default function Home() {
             
             {/* Texte */}
             <div className="space-y-6">
-              <h1 className="text-4xl xl:text-5xl font-bold leading-tight">
-                Rejoignez plus de <span className="text-blue-500">1000+</span> parieurs gagnants sur 1xBet !
-              </h1>
-              <p className="text-lg">
-                Profitez de notre code promo exclusif pour{" "}
-                <span className="font-semibold text-blue-500">
-                  doubler votre premier dépôt
-                </span>{" "}
-                et maximiser vos chances dès le début.
-              </p>
-              <ul className="space-y-2">
-                <li>Bonus de bienvenue <strong>200%</strong></li>
-                <li>Inscription rapide en 1 minute</li>
-                <li>Paiements sécurisés et variés</li>
-                <li>Accès à toutes les compétitions sportives & eSports</li>
-              </ul>
+              <Reveal direction="right">
+                <h1 className="text-4xl xl:text-5xl font-bold leading-tight">
+                  Rejoignez plus de <span className="text-blue-500">1000+</span> parieurs gagnants sur 1xBet !
+                </h1>
+                <p className="text-lg">
+                  Profitez de notre code promo exclusif pour{" "}
+                  <span className="font-semibold text-blue-500">
+                    doubler votre premier dépôt
+                  </span>{" "}
+                  et maximiser vos chances dès le début.
+                </p>
+                <ul className="space-y-2">
+                  <li>Bonus de bienvenue <strong>200%</strong></li>
+                  <li>Inscription rapide en 1 minute</li>
+                  <li>Paiements sécurisés et variés</li>
+                  <li>Accès à toutes les compétitions sportives & eSports</li>
+                </ul>
 
-              {/* Boutons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                <button 
-                  className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-500 transition" 
-                  onClick={()=>window.location.href='https://refpa58144.com/L?tag=d_2945337m_1573c_&site=2945337&ad=1573'}
-                >
-                  S&apos;inscrire maintenant
-                </button>
-                <button
-                  onClick={handleCopy}
-                  className="border border-blue-500 text-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition"
-                >
-                  {copied ? "✅ Code copié !" : "Copier le code promo"}
-                </button>
-              </div>
+                {/* Boutons */}
+                <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                  <button 
+                    className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-500 transition" 
+                    onClick={()=>window.location.href='https://refpa58144.com/L?tag=d_2945337m_1573c_&site=2945337&ad=1573'}
+                  >
+                    S&apos;inscrire maintenant
+                  </button>
+                  <button
+                    onClick={handleCopy}
+                    className="border border-blue-500 text-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition"
+                  >
+                    {copied ? "✅ Code copié !" : "Copier le code promo"}
+                  </button>
+                </div>
+              </Reveal>
             </div>
 
             {/* Image illustration */}
             <div className="flex justify-center">
-              <img
-                src="/pronostics-foot.webp"
-                alt="1xBet inscription"
-                className="rounded-2xl  max-h-[400px] object-cover"
-              />
+              <Reveal direction="left">
+                <img
+                  src="/pronostics-foot.webp"
+                  alt="1xBet inscription"
+                  className="rounded-2xl  max-h-[400px] object-cover"
+                />
+              </Reveal>
             </div>
           </div>
         </section>
 
         <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="what-is-bookmaker">
+          
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
-              What is a bookmaker and why use one?
-            </h1>
-            <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-              Understand the role of bookmakers and how they make your online betting possible.
-            </p>
+            <Reveal>
+              <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
+                What is a bookmaker and why use one?
+              </h1>
+              <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+                Understand the role of bookmakers and how they make your online betting possible.
+              </p>
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 mt-12 items-center justify-center">
             {/* Images */}
-            <div className="relative flex gap-4">
-              <Image
-                src="/1xbet.webp"
-                alt="1xbet"
-                width={1000}
-                height={1000}
-                className="rounded-2xl mx-auto  w-2/3 md:w-1/2 object-cover"
-              />
-              <Image
-                src="/melbet.webp"
-                alt="melbet"
-                width={1000}
-                height={1000}
-                className="hidden md:block rounded-2xl w-1/3 object-cover"
-              />
-            </div>
+            <Reveal direction="right">
+              <div className="relative flex gap-4">
+                  <Image
+                    src="/1xbet.webp"
+                    alt="1xbet"
+                    width={1000}
+                    height={1000}
+                    className="rounded-2xl mx-auto  w-2/3 md:w-1/2 object-cover"
+                  />
+                  <Image
+                    src="/melbet.webp"
+                    alt="melbet"
+                    width={1000}
+                    height={1000}
+                    className="hidden md:block rounded-2xl w-1/3 object-cover"
+                  />
+              </div>
+            </Reveal>
 
             {/* Text Content */}
             <div className="space-y-5 text-gray-800">
+              <Reveal direction="left">
               <p className="leading-relaxed">
                 A <span className="font-semibold text-blue-500">bookmaker</span> is a platform
                 specializing in taking sports or online gaming bets. Its role is to offer odds
@@ -194,12 +213,14 @@ export default function Home() {
                 <span className="font-semibold">promo codes</span> that boost initial deposits
                 and maximize winnings.
               </p>
+              </Reveal>
             </div>
           </div>
         </section>
 
         <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="advantages-bookmakers">
           <div className="max-w-6xl mx-auto text-center">
+            <Reveal>
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
               Why Choose Online Bookmakers?
             </h1>
@@ -210,56 +231,72 @@ export default function Home() {
               <span className="font-medium text-blue-500"> variety</span>, 
               and an <span className="font-medium text-blue-500">easy-to-use experience</span>.
             </p>
+            </Reveal>
           </div>
 
-          <div>
-            <Image src={"/bookmarkers.jpg"} width={1000} height={1000} alt="bookmarker" className="mx-auto rounded-xl"></Image>
+          <div className="mt-3.5">
+            <Reveal>
+              <Image src={"/bookmarkers.jpg"} width={1000} height={1000} alt="bookmarker" className="mx-auto rounded-xl"></Image>
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3.5 mt-3.5">
             {/* Card 1 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Exclusive Bonuses</h2>
               <p className="mt-3 text-gray-700">
                 Get welcome bonuses, free bets, and promo codes that maximize your winnings.
               </p>
             </div>
+            </Reveal>
 
             {/* Card 2 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Wide Variety of Sports</h2>
               <p className="mt-3 text-gray-700">
                 Bet on football, tennis, basketball, e-sports and many more events worldwide.
               </p>
             </div>
+            </Reveal>
 
             {/* Card 3 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6 hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Safety & Reliability</h2>
               <p className="mt-3 text-gray-700">
                 All bookmakers are licensed, regulated and provide secure transactions.
               </p>
             </div>
+            </Reveal>
 
             {/* Card 4 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6 hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Easy & Fast Experience</h2>
               <p className="mt-3 text-gray-700">
                 Simple platforms and mobile apps make betting smooth and accessible anywhere.
               </p>
             </div>
+            </Reveal>
           </div>
         </section>
 
         <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="nos-code-promo">
           <div className="text-center">
+            <Reveal>
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Our exclusive promo codes for bookmakers</h1>
             <p>Get your welcome bonus and increase your bets from the first registration.</p>
+            </Reveal>
           </div>
-          <div>
+          <div className="mt-3.5">
+            <Reveal>
             <Image src={"/code-promo.webp"} width={800} height={800} alt="code promo" className="mx-auto rounded-xl"></Image>
+            </Reveal>
           </div>
           <div className="mt-10 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mx-auto">
+            <Reveal>
             <PromoCard
                name="1xbet"
                subtitle="Enjoy an explosive start with a generous bonus."
@@ -268,6 +305,8 @@ export default function Home() {
                logo="/1xbet.png"
                link="https://refpa58144.com/L?tag=d_2945337m_1573c_&site=2945337&ad=1573"
             />
+            </Reveal>
+            <Reveal>
             <PromoCard
                name="888starz"
                subtitle="A world of exclusive games and offers"
@@ -276,6 +315,8 @@ export default function Home() {
                logo="/888starz.png"
                link="https://top100bonus.com/L?tag=d_3330235m_40211c_&site=3330235&ad=40211"
             />
+            </Reveal>
+            <Reveal>
             <PromoCard
                name="Melbet"
                subtitle="The smart choice to boost your first bets"
@@ -284,6 +325,8 @@ export default function Home() {
                logo="/melbet.png"
                link="https://refpa3665.com/L?tag=d_3297580m_2170c_&site=3297580&ad=2170"
             />
+            </Reveal>
+            <Reveal>
             <PromoCard
                name="betwinner"
                subtitle="The smart choice to boost your first bets"
@@ -292,6 +335,8 @@ export default function Home() {
                logo=""
                link="#"
             />
+            </Reveal>
+            <Reveal>
             <PromoCard
                name="Megaparis"
                subtitle="The smart choice to boost your first bets"
@@ -300,11 +345,13 @@ export default function Home() {
                logo=""
                link="https://refpazitag.top/L?tag=d_3860481m_25437c_&site=3860481&ad=25437"
             />
+            </Reveal>
           </div>
         </section>
 
         <section className="max-w-6xl mx-auto w-full p-2.5 xl:p-5" id="why-choose-code">
           <div className="max-w-6xl mx-auto text-center">
+            <Reveal>
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">
               Why Choose Our Promo Code?
             </h1>
@@ -314,12 +361,16 @@ export default function Home() {
               <span className="font-medium text-blue-500"> more rewards</span>, and 
               <span className="font-medium text-blue-500">maximum value</span> on every deposit.
             </p>
+            </Reveal>
           </div>
-          <div>
+          <div className="mt-3.5">
+            <Reveal>
             <Image src={"/think.jpg"} width={500} height={500} alt="bookmarker" className="mx-auto rounded-xl"></Image>
+            </Reveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 md:mt-12">
             {/* Card 1 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Bigger Welcome Bonus</h2>
               <p className="mt-3 text-gray-700">
@@ -327,8 +378,10 @@ export default function Home() {
                 when using our code — more than the standard offer.
               </p>
             </div>
+            </Reveal>
 
             {/* Card 2 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Extra Rewards</h2>
               <p className="mt-3 text-gray-700">
@@ -336,8 +389,10 @@ export default function Home() {
                 reserved only for players using our promo code.
               </p>
             </div>
+            </Reveal>
 
             {/* Card 3 */}
+            <Reveal>
             <div className="border border-gray-200 bg-white rounded-2xl p-6  hover:shadow-xl transition">
               <h2 className="text-xl font-semibold text-blue-500">Faster Start</h2>
               <p className="mt-3 text-gray-700">
@@ -345,9 +400,11 @@ export default function Home() {
                 letting you jump into betting without delays.
               </p>
             </div>
+            </Reveal>
           </div>
 
           {/* CTA */}
+          <Reveal>
           <div className="mt-12 text-center">
             <a
               href="#register"
@@ -356,13 +413,17 @@ export default function Home() {
               Use Our Promo Code
             </a>
           </div>
+          </Reveal>
         </section>
 
         <section className="max-w-6xl mx-auto w-full xl:p-5 mt-5" id="testimonial">
           <div className="text-center text-black">
+            <Reveal>
             <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Testimonials</h1>
+            </Reveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 mt-3.5">
+            <Reveal>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
                 <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
@@ -393,6 +454,8 @@ export default function Home() {
               </div>
 
             </div>
+            </Reveal>
+            <Reveal>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
                 <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
@@ -423,6 +486,8 @@ export default function Home() {
               </div>
 
             </div>
+            </Reveal>
+            <Reveal>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
                 <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
@@ -453,6 +518,8 @@ export default function Home() {
               </div>
 
             </div>
+            </Reveal>
+            <Reveal>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
                 <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
@@ -483,6 +550,8 @@ export default function Home() {
               </div>
 
             </div>
+            </Reveal>
+            <Reveal>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
                 <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
@@ -513,6 +582,8 @@ export default function Home() {
               </div>
 
             </div>
+            </Reveal>
+            <Reveal>
             <div className="border border-gray-200 rounded-xl p-3.5">
               <div className="flex gap-3.5 items-center">
                 <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
@@ -543,14 +614,171 @@ export default function Home() {
               </div>
 
             </div>
+            </Reveal>
           </div>
           
+        </section>
+
+        <section className="w-full bg-gray-50 text-black py-16 px-6 rounded-2xl mt-10">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
+            {/* Text and links */}
+            <div className="space-y-6">
+              <Reveal>
+              <h1 className="text-4xl xl:text-5xl font-bold leading-tight">
+                Download the Best Bookmakers&apos; Apps
+              </h1>
+              <p className="text-lg text-gray-700">
+                Access your favorite betting sites more easily from your mobile. 
+                Click on the official links to install Android or iOS apps, or download the APK if the app is not available in the stores.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3.5 mt-8">
+                {/* 1xBet */}
+                <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col items-start">
+                  <h2 className="text-xl font-semibold mb-2">1xBet</h2>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Android / iOS App or Official APK
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://1xbet.com/en/mobile" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition"
+                    >
+                      Download / Info
+                    </a>
+                    <a
+                      href="https://play.google.com/store/apps/details?hl=en_CA&id=org.xbet.client.ng_ps"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 border border-blue-800 text-blue-800 rounded-md hover:bg-blue-50 transition"
+                    >
+                      Google Play
+                    </a>
+                  </div>
+                </div>
+
+                {/* Melbet */}
+                <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col items-start">
+                  <h2 className="text-xl font-semibold mb-2">Melbet</h2>
+                  <p className="text-sm text-gray-500 mb-4">
+                    iOS App available, Android APK
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://apps.apple.com/in/app/melbet-sports-betting/id1005593631"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-green-700 text-white rounded-md hover:bg-green-800 transition"
+                    >
+                      App Store
+                    </a>
+                    <a
+                      href="https://melbet.en.uptodown.com/android"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 border border-green-700 text-green-700 rounded-md hover:bg-green-50 transition"
+                    >
+                      Download APK
+                    </a>
+                  </div>
+                </div>
+
+                {/* BetWinner */}
+                <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col items-start">
+                  <h2 className="text-xl font-semibold mb-2">BetWinner</h2>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Official Mobile Application
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://betwinner.com/en/mobile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-purple-800 text-white rounded-md hover:bg-purple-900 transition"
+                    >
+                      Get App / Info
+                    </a>
+                  </div>
+                </div>
+
+                {/* 888Starz */}
+                <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col items-start">
+                  <h2 className="text-xl font-semibold mb-2">888Starz</h2>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Android & iOS APK Download
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://888starz.bet/en/mobile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-red-700 text-white rounded-md hover:bg-red-800 transition"
+                    >
+                      Download App
+                    </a>
+                    <a
+                      href="https://888starz.en.uptodown.com/android"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 border border-red-700 text-red-700 rounded-md hover:bg-red-50 transition"
+                    >
+                      Download APK
+                    </a>
+                  </div>
+                </div>
+
+                {/* Megapari */}
+                <div className="border border-gray-200 rounded-xl p-5 bg-white shadow-sm flex flex-col items-start">
+                  <h2 className="text-xl font-semibold mb-2">Megapari</h2>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Mobile Download (Android / iOS)
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="#"
+                      className="px-4 py-2 bg-indigo-700 text-white rounded-md hover:bg-indigo-800 transition"
+                    >
+                      Visit Site
+                    </a>
+                    {/* If APK or store available, add link here */}
+                  </div>
+                </div>
+              </div>
+              </Reveal>
+
+            </div>
+
+            {/* Image or illustration */}
+            <div className="">
+              <Reveal direction="left">
+              <img
+                src="/mobile.webp"
+                alt="Mobile betting apps"
+                width={1000}
+                height={1000}
+                className="rounded-xl mb-3.5"
+              />
+              <img
+                src="/mobile2.webp"
+                alt="Mobile betting apps"
+                width={1000}
+                height={1000}
+                className="rounded-xl"
+              />
+              </Reveal>
+            </div>
+          </div>
         </section>
 
         <section className="max-w-6xl mx-auto w-full xl:p-5 mt-5 text-black" id="faq">
           <div className="grid cols-1 xl:grid-cols-2 gap-20">
             <div>
+              <Reveal>
               <h1 className="mt-6 text-4xl md:text-5xl font-extrabold text-blue-500 tracking-tight">Frequently Asked Questions</h1>
+              </Reveal>
+              <Reveal direction="right">
               <div className="mt-5 border border-gray-200 p-5 rounded-xl">
                 <div className="flex w-full items-center justify-center">
                   <Image
@@ -565,7 +793,7 @@ export default function Home() {
                 <div className="text-center mt-3.5">
                   <p>Do you need more help?</p>
                   <p>
-                    If you can’t find the answer you’re looking for, please contact us by
+                    If you can&apos;t find the answer you&apos;re looking for, please contact us by
                     clicking the button below.
                   </p>
                 </div>
@@ -588,8 +816,10 @@ export default function Home() {
                   </button>
                 </div>
               </div>
+              </Reveal>
             </div>
             <div>
+              <Reveal direction="left">
               <Accordion
                 type="single"
                 collapsible
@@ -640,7 +870,7 @@ export default function Home() {
                 </AccordionItem>
 
                 <AccordionItem value="item-5">
-                  <AccordionTrigger>What should I do if the code doesn’t work?</AccordionTrigger>
+                  <AccordionTrigger>What should I do if the code doesn&apos;t work?</AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance">
                     <p>
                       Some codes may expire over time. We regularly update our list to
@@ -649,6 +879,7 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+              </Reveal>
             </div>
           </div>
         </section>
