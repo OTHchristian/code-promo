@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ReactNode } from "react";
 
 interface RevealProps {
   children: ReactNode;
-  direction?: "left" | "right" | "up" | "down"; // direction d'apparition
+  direction?: "left" | "right" | "up" | "down";
   delay?: number;
   duration?: number;
 }
@@ -18,12 +18,15 @@ export default function Reveal({
   duration = 0.8,
 }: RevealProps) {
   const { ref, inView } = useInView({
-    triggerOnce: true, // n’anime qu’une fois
-    threshold: 0.1, // visible à 10%
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
-  // définir la translation initiale en fonction de la direction
-  const variants: Record<string, { hidden: any; visible: any }> = {
+  // ✅ typage correct avec Variants
+  const variants: Record<
+    "up" | "down" | "left" | "right",
+    Variants
+  > = {
     up: {
       hidden: { opacity: 0, y: 100 },
       visible: { opacity: 1, y: 0 },
