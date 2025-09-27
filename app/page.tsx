@@ -1,6 +1,7 @@
 'use client'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import PromoCard from "@/components/ui/card";
+import Compteur from "@/components/ui/compteur";
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/navBar";
 import Image from "next/image";
@@ -50,25 +51,25 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:w-4/5 xl:mx-auto text-black">
             <div className=" border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+1000</h1>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={1000}></Compteur></h1>
                   <p className="text-gray-500 mt-3.5">users already benefit from our promo codes every day.</p>
                 </div>
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+500</h1>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={500}></Compteur></h1>
                   <p className="text-gray-500 mt-3.5">offers available You can easily find exclusive bonuses for your favorite bookmarkers.</p>
                 </div> 
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+200</h1>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={200}></Compteur></h1>
                   <p className="text-gray-500 mt-3.5">partners.We work with the best brands to offer you maximum savings.</p>
                 </div>
             </div>
             <div className="border border-gray-200 rounded-xl p-3.5">
                 <div className="text-center">
-                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500">+99%</h1>
+                  <h1 className="font-semibold text-3xl xl:text-4xl text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={99}></Compteur>%</h1>
                   <p className="text-gray-500 mt-3.5">satisfaction. Our users love saving online with our curated offers.</p>
                 </div>
             </div>
