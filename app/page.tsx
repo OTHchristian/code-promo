@@ -28,7 +28,7 @@ export default function Home() {
             <div className="z-10 absolute w-full h-full xl:bg-gradient-to-b from-[rgba(0,0,0,0)] via-blue-100 to-white text-black flex mt-5 md::mt-0 md:items-center justify-center">
               <div className="xl:w-3/5 xl:p-3.5 text-center">
               <h1 className="text-4xl mb-1 font-semibold"><span className="text-blue-500 flex items-center justify-center">+<Compteur valeurFinale={200}></Compteur>% </span>on your first deposit</h1>
-              <h1 className="text-4xl text-blue-500 font-semibold xl:mb-5">GOTEN7</h1>
+              <h1 className="text-4xl text-blue-500 font-semibold xl:mb-5 animate-bounce">GOTEN7</h1>
                 <div className="hidden xl:flex w-4/5 mx-auto rounded-full p-3.5 bg-blue-500 text-white items-center justify-center gap-3.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-fire" viewBox="0 0 16 16">
                     <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
@@ -334,13 +334,13 @@ export default function Home() {
                subtitle="The smart choice to boost your first bets"
                code="GOTEN8"
                bonus="100% on the first deposit"
-               logo=""
+               logo="/betwinner.png"
                link="#"
             />
             </Reveal>
             <Reveal>
             <PromoCard
-               name="Megaparis"
+               name="Megapari"
                subtitle="The smart choice to boost your first bets"
                code="GOTEN7"
                bonus="100% on the first deposit"

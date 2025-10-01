@@ -58,9 +58,9 @@ export default function PromoCard({ name, subtitle, code, bonus, logo,link }: Pr
 
   return (
     <article className="max-w-sm w-full bg-white  rounded-2xl overflow-hidden border border-gray-200">
-      <div className="p-5 flex flex-col gap-4">
+      <div className="bg-red-500 p-3.5 text-white text-xl">🔥Code promo</div>
+      <div className="p-3.5 flex flex-col gap-4">
         {/* Header: logo + name */}
-        <div className="flex items-center gap-3">
           <div className="w-20 h-20 flex items-center justify-center rounded-lg overflow-hidden">
             {logo ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -69,10 +69,9 @@ export default function PromoCard({ name, subtitle, code, bonus, logo,link }: Pr
               <div className="text-sm font-semibold text-gray-700">{name.charAt(0)}</div>
             )}
           </div>
-          <div className="flex-1">
+          <div>
             <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
             <p className="text-sm text-gray-500 truncate">{subtitle}</p>
-          </div>
         </div>
 
         {/* Bonus short line (optional) */}
@@ -87,12 +86,12 @@ export default function PromoCard({ name, subtitle, code, bonus, logo,link }: Pr
           <div className="flex-1 bg-black/5 rounded-md px-3 py-2 flex items-center justify-between">
             <div>
               <p className="text-xs text-gray-500">Promotional code</p>
-              <p className="font-mono font-semibold text-sm text-gray-900">{code}</p>
+              <p className="font-mono font-semibold text-sm text-gray-900 mt-3.5">{code}</p>
             </div>
             <button
               onClick={handleCopy}
               aria-label="Copier le code promo"
-              className="hidden md:inline-flex items-center gap-2 px-3 py-2 border rounded-md bg-white hover:bg-gray-50"
+              className="inline-flex items-center gap-2 px-3 py-2 border rounded-md bg-white hover:bg-gray-50"
             >
               {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
               <span className="text-sm">{copied ? "copy" : "copy"}</span>
